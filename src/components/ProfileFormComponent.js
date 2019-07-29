@@ -1,7 +1,8 @@
 import React from 'react';
 
 class ProfileForm extends React.Component {
-    state = {
+    
+    /*state = {
         firstName: '',
         lastName:'',
         email:'',
@@ -20,7 +21,7 @@ class ProfileForm extends React.Component {
             [e.target.name] : e.target.value
         }
      )
-}
+}*/
 
 handleClic = e => {
     console.log('El botón ha sido presionado');
@@ -38,7 +39,7 @@ render() {
                 <div className='form.group'>
                     <label>Nombres</label>
                     <input
-                        onChange={this.handleChange}
+                        onChange={this.props.onChange}
                         className='form-control'
                         type='text'
                         name='firstName'
@@ -49,7 +50,7 @@ render() {
                 <div className='form.group'>
                     <label>Apellidos</label>
                     <input
-                        onChange={this.handleChange}
+                        onChange={this.props.onChange}
                         className='form-control'
                         type='text'
                         name='lastName'
@@ -60,7 +61,7 @@ render() {
                 <div className='form.group'>
                     <label>Correo Electrónico</label>
                     <input
-                        onChange={this.handleChange}
+                        onChange={this.props.onChange}
                         className='form-control'
                         type='email'
                         name='email'
@@ -71,7 +72,7 @@ render() {
                 <div className='form.group'>
                     <label>En qué trabajas</label>
                     <input
-                        onChange={this.handleChange}
+                        onChange={this.props.onChange}
                         className='form-control'
                         type='text'
                         name='jobTitle'
@@ -82,7 +83,7 @@ render() {
                 <div className='form.group'>
                     <label>Twitter</label>
                     <input
-                        onChange={this.handleChange}
+                        onChange={this.props.onChange}
                         className='form-control'
                         type='text'
                         name='twitter'

@@ -4,7 +4,7 @@ import NavBar from '../components/NavBarComponent';
 import '../styles/ProfileNewStyle.css';
 import ProfileForm from '../components/ProfileFormComponent';
 
-class ProfileNew extends React.Component {
+class ProfileEdit extends React.Component {
     state = {
         firstName: '',
         lastName:'',
@@ -62,4 +62,4 @@ class ProfileNew extends React.Component {
     }
 }
 
-export default ProfileNew;
+export default ProfileEdit;
