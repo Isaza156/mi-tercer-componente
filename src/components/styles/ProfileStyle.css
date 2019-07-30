@@ -3,32 +3,32 @@
   box-shadow: 0 4px 8px 0 black;
 }
 
-.Profile__header {
+.Profile__header{
   padding: 20px;
-  background: #455a64;
+  background: #455A64;
   display: flex;
   justify-content: center;
 }
 
-.Profile__logo {
+.Profile__logo{
   max-width: 50%;
   height: auto;
 }
 
-.Profile__section-name {
+.Profile__section-name{
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
 }
 
-.Profile__avatar {
+.Profile__avatar{
   margin-right: 15px;
   width: 120px;
   height: 120px;
 }
 
-.Profile__section-info {
+.Profile__section-info{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,11 +37,11 @@
   background: lightgray;
 }
 
-.Profile__footer {
+.Profile__footer{
   height: 54px;
   display: flex;
   justify-content: center;
-  color: #00bcd4;
+  color: #00BCD4;
   font-style: italic;
   align-items: center;
 }

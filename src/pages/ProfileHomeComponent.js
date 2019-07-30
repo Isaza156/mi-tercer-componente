@@ -1,26 +1,22 @@
 import React from 'react';
-import NavBar from '../components/NavBarComponent';
-import '../styles/ProfileHome.css';
+import { Link } from 'react-router-dom'
+import './styles/ProfileHomeStyle.css'
 
-class ProfileHome extends React.Component {
-    
-    render() { 
-        return ( 
-        <div className='vh-100'>
-           <NavBar />
-             <div className='texto container-fluid '>                 
-                 <div className='iniciar row '>
-                     <p className='m-5'>Esta es nuestra Super 
-                        <br/> Conferencia Geek! Bienvenidos <br/> O.O </p>
-                        <div>
-                        <button onClick={this.handleClic} className='btn btn-primary m-5'>Iniciar</button>
-                        </div>
-                 </div>
-            </div>
-            
-        </div>
-         );
-    }
+function ProfileHome() {
+	return (
+		<div className="Home">
+			<div className="">
+                <div className="row">
+                    <div className="col-6 mr-50">
+                        <h1>Esta es nuestra Super Conferencia Geek! Bienvenidos O.O </h1>
+                    </div>
+                    <div className ="col-6 ml-50" >
+                        <Link className="btn btn-primary" to="/profile">Iniciar</Link>
+                    </div>
+                </div>
+			</div>
+		</div>
+	)
 }
  
 export default ProfileHome;

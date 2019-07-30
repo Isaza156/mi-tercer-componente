@@ -1,63 +1,58 @@
 import React from 'react';
+import './styles/ProfileEditStyle.css'
 import Profile from '../components/ProfileComponent';
-import NavBar from '../components/NavBarComponent';
-import '../styles/ProfileNewStyle.css';
 import ProfileForm from '../components/ProfileFormComponent';
 
+
 class ProfileEdit extends React.Component {
-    state = {
-        firstName: '',
-        lastName:'',
-        email:'',
-        jobTitle:'',
-        twitter:''
-    }
+
+    state = { form: {
+        firstName: 'Daphney',
+        lastName: 'Torphy',
+        email:'Ron61@hotmail.com',
+        jobTitle:'National Markets Office',
+        twitter:'DaphneyTorphy96105'
+    }};
 
     handleChange = e => {
-        console.log({
-            name: e.target.name,
-            value: e.target.value,
-        });
-
-        this.setState(
-            {
-            [e.target.name] : e.target.value
-        }
-     )
-}
-
-    render() {
+        this.setState({
+            form: {
+                ...this.state.form,
+                [e.target.name]: e.target.value
+            }
+        })
+    }
+    render(){
         return (
-            <div>
-                <NavBar />
-                <div className='ProfileNew__hero'>
-                    <span className='ProfileNew__hero-text'>
-                        Bienvenidos todos a la conferencia Geek, esperamos todas nuestras charlas sean de su total interes.
+            <React.Fragment>
+                <div className="ProfileEdit__hero">
+                    <span className="ProfileEdit__hero-text">
+                        "Bienvenido a la conferencia Geek! ,
+                        esperamos todas nuestras charlas sean de tu total interes"
                     </span>
                 </div>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-6'>
-                            <Profile
-                                
-                                firstName={this.state.firstName}
-                                lastName={this.state.lastName}
-                                twitter={this.state.twitter}
-                                avatarUrl='https://eafitrequisitos.s3.us-east-2.amazonaws.com/john.png'
-                            />
+
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6 ">
+                            <Profile    
+                                    firstName = {this.state.form.firstName} 
+                                    lastName = {this.state.form.lastName} 
+                                    jobTitle = {this.state.form.jobTitle} 
+                                    twitter = {this.state.form.twitter}
+                                    email = {this.state.form.email} 
+                                    avatarUrl = "https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
+                                />
                         </div>
-                        <div className='col-6'>
-                            <ProfileForm
-                             onChange={this.handleChange}
-                             firstName={this.state.firstName}
-                             lastName={this.state.lastName}
-                             twitter={this.state.twitter}
-                             avatarUrl='https://eafitrequisitos.s3.us-east-2.amazonaws.com/john.png'
+                        <div className="col-6">
+                            <h1>Editar Asistente</h1>
+                            <ProfileForm onChange={this.handleChange} 
+                                formValues =  {this.state.form}
                             />
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         );
     }
 }
